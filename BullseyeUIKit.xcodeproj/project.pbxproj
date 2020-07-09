@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4917B13724B263AF0072CFB9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4917B13624B263AF0072CFB9 /* AboutViewController.swift */; };
+		4917B15024B268800072CFB9 /* Bullseye.html in Resources */ = {isa = PBXBuildFile; fileRef = 4917B14F24B268800072CFB9 /* Bullseye.html */; };
+		4917B15324B3A5780072CFB9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4917B15224B3A5780072CFB9 /* WebKit.framework */; };
+		4917B15524B3AAD00072CFB9 /* HighScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4917B15424B3AAD00072CFB9 /* HighScoresTableViewController.swift */; };
+		497F0D1424B76F5300D8154E /* HighScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F0D1324B76F5300D8154E /* HighScoreItem.swift */; };
+		497F0D1624B7A02000D8154E /* PersistencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F0D1524B7A02000D8154E /* PersistencyHelper.swift */; };
+		497F0D1824B7B02F00D8154E /* EditHighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F0D1724B7B02F00D8154E /* EditHighScoreViewController.swift */; };
 		49A9635B24AE7A33005905FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9635A24AE7A33005905FC /* AppDelegate.swift */; };
 		49A9635D24AE7A33005905FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9635C24AE7A33005905FC /* SceneDelegate.swift */; };
 		49A9635F24AE7A33005905FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9635E24AE7A33005905FC /* ViewController.swift */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4917B13624B263AF0072CFB9 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		4917B14F24B268800072CFB9 /* Bullseye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Bullseye.html; path = "../../iOS/iOS_Apprentice_v8.1-1.0/15-getting-started-uikit/Resources/Bullseye.html"; sourceTree = "<group>"; };
+		4917B15224B3A5780072CFB9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4917B15424B3AAD00072CFB9 /* HighScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresTableViewController.swift; sourceTree = "<group>"; };
+		497F0D1324B76F5300D8154E /* HighScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreItem.swift; sourceTree = "<group>"; };
+		497F0D1524B7A02000D8154E /* PersistencyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyHelper.swift; sourceTree = "<group>"; };
+		497F0D1724B7B02F00D8154E /* EditHighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHighScoreViewController.swift; sourceTree = "<group>"; };
 		49A9635724AE7A33005905FC /* BullseyeUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullseyeUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9635A24AE7A33005905FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A9635C24AE7A33005905FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +45,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4917B15324B3A5780072CFB9 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4917B15124B3A5780072CFB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4917B15224B3A5780072CFB9 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		49A9634E24AE7A33005905FC = {
 			isa = PBXGroup;
 			children = (
 				49A9635924AE7A33005905FC /* BullseyeUIKit */,
 				49A9635824AE7A33005905FC /* Products */,
+				4917B15124B3A5780072CFB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +80,19 @@
 		49A9635924AE7A33005905FC /* BullseyeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4917B14F24B268800072CFB9 /* Bullseye.html */,
 				49A9635A24AE7A33005905FC /* AppDelegate.swift */,
 				49A9635C24AE7A33005905FC /* SceneDelegate.swift */,
 				49A9635E24AE7A33005905FC /* ViewController.swift */,
+				4917B13624B263AF0072CFB9 /* AboutViewController.swift */,
+				4917B15424B3AAD00072CFB9 /* HighScoresTableViewController.swift */,
 				49A9636024AE7A33005905FC /* Main.storyboard */,
 				49A9636324AE7A37005905FC /* Assets.xcassets */,
 				49A9636524AE7A37005905FC /* LaunchScreen.storyboard */,
 				49A9636824AE7A37005905FC /* Info.plist */,
+				497F0D1324B76F5300D8154E /* HighScoreItem.swift */,
+				497F0D1524B7A02000D8154E /* PersistencyHelper.swift */,
+				497F0D1724B7B02F00D8154E /* EditHighScoreViewController.swift */,
 			);
 			path = BullseyeUIKit;
 			sourceTree = "<group>";
@@ -126,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A9636724AE7A37005905FC /* LaunchScreen.storyboard in Resources */,
+				4917B15024B268800072CFB9 /* Bullseye.html in Resources */,
 				49A9636424AE7A37005905FC /* Assets.xcassets in Resources */,
 				49A9636224AE7A33005905FC /* Main.storyboard in Resources */,
 			);
@@ -138,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4917B15524B3AAD00072CFB9 /* HighScoresTableViewController.swift in Sources */,
+				497F0D1424B76F5300D8154E /* HighScoreItem.swift in Sources */,
+				497F0D1624B7A02000D8154E /* PersistencyHelper.swift in Sources */,
 				49A9635F24AE7A33005905FC /* ViewController.swift in Sources */,
 				49A9635B24AE7A33005905FC /* AppDelegate.swift in Sources */,
+				4917B13724B263AF0072CFB9 /* AboutViewController.swift in Sources */,
 				49A9635D24AE7A33005905FC /* SceneDelegate.swift in Sources */,
+				497F0D1824B7B02F00D8154E /* EditHighScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

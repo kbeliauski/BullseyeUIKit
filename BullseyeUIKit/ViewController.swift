@@ -23,9 +23,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         StartOver()
+        
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")!
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        
+        let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")!
+        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        let insets  = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let trackLeftImage = UIImage(named: "SliderTrackLeft")!
+        let trackLeftResizable = trackLeftImage.resizableImage(withCapInsets: insets)
+        slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+        
+        let trackRightImage = UIImage(named: "SliderTrackRight")!
+        let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
     }
     
     @IBAction func StartOver() {
+        addHighScore(score)
         round = 0
         score = 0
         startNewRound()
@@ -81,6 +98,21 @@ class ViewController: UIViewController {
         scoreLabel.text = String(score)
         roundLabel.text = String(round)
         
+    }
+    
+    func addHighScore(_ score: Int) {
+        guard score > 0 else {
+            return;
+        }
+        
+        let highscore = HighScoreItem()
+        highscore.score = score
+        highscore.name = "Unknown"
+        
+        var highScores = PersistencyHelper.loadHighScores()
+        highScores.append(highscore)
+        highScores.sort {$0.score > $1.score}
+        PersistencyHelper.saveHighScores(highScores)
     }
 
 }
